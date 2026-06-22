@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mystical Magnificent Molly — Ancient Wisdom, Personally Revealed</title>
+<meta name="description" content="Tarot, Gong Hee Fot Choy, Birth Charts, Human Design, and sacred tools for the modern seeker. Personal readings and divination goods by Molly.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Cormorant:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink:       #0c0916;
+    --ink-mid:   #160f2a;
+    --ink-soft:  #1e1435;
+    --gold:      #c9a84c;
+    --gold-dim:  #8a6e2f;
+    --gold-pale: #f0e0b0;
+    --petal:     #e8dfc8;
+    --mist:      #b8a8d0;
+    --shadow:    #6a5a8a;
+    --line:      rgba(201,168,76,0.2);
+    --line-soft: rgba(100,80,140,0.3);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--ink);
+    color: var(--petal);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 18px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(12,9,22,0.96);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+    padding: 16px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-logo {
+    font-size: 15px;
+    letter-spacing: 3px;
+    color: var(--gold);
+    font-style: italic;
+    font-weight: 300;
+    text-decoration: none;
+  }
+  .nav-links {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+  }
+  .nav-links a {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--mist);
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 400;
+    transition: color 0.3s;
+    text-transform: uppercase;
+  }
+  .nav-links a:hover { color: var(--gold); }
+  .nav-book {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--gold);
+    border: 1px solid var(--gold);
+    padding: 8px 20px;
+    text-decoration: none;
+    transition: all 0.3s;
+    text-transform: uppercase;
+  }
+  .nav-book:hover { background: var(--gold); color: var(--ink); }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 92vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 32px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 70% 60% at 50% 60%, rgba(80,40,120,0.18) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-eyebrow {
+    font-size: 11px;
+    letter-spacing: 6px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    opacity: 0.8;
+  }
+  .hero-ornament {
+    font-size: 22px;
+    color: var(--gold);
+    letter-spacing: 12px;
+    margin-bottom: 32px;
+    opacity: 0.6;
+  }
+  .hero h1 {
+    font-size: clamp(38px, 6vw, 72px);
+    font-weight: 300;
+    line-height: 1.12;
+    letter-spacing: 2px;
+    color: var(--petal);
+    margin-bottom: 10px;
+  }
+  .hero h1 em {
+    color: var(--gold);
+    font-style: italic;
+  }
+  .hero-tagline {
+    font-size: 16px;
+    font-style: italic;
+    color: var(--mist);
+    font-weight: 300;
+    margin: 24px auto 12px;
+    max-width: 480px;
+    line-height: 1.9;
+    letter-spacing: 0.5px;
+  }
+  .hero-disciplines {
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: var(--shadow);
+    text-transform: uppercase;
+    margin-bottom: 48px;
+  }
+  .hero-cta {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .btn-primary {
+    background: var(--gold);
+    color: var(--ink);
+    padding: 14px 36px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    transition: opacity 0.3s;
+  }
+  .btn-primary:hover { opacity: 0.85; }
+  .btn-outline {
+    background: transparent;
+    color: var(--gold);
+    padding: 14px 36px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid var(--gold-dim);
+    cursor: pointer;
+    display: inline-block;
+    transition: all 0.3s;
+  }
+  .btn-outline:hover { border-color: var(--gold); }
+  .hero-scroll {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--shadow);
+    text-transform: uppercase;
+    animation: float 2.5s ease-in-out infinite;
+  }
+  @keyframes float { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(6px)} }
+
+  /* ── SECTION SHARED ── */
+  section { padding: 80px 32px; }
+  .section-inner { max-width: 1080px; margin: 0 auto; }
+  .eyebrow {
+    font-size: 10px;
+    letter-spacing: 5px;
+    color: var(--gold);
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 12px;
+    display: block;
+  }
+  .section-title {
+    font-size: clamp(26px, 3.5vw, 40px);
+    font-weight: 300;
+    color: var(--petal);
+    text-align: center;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+  }
+  .section-sub {
+    font-size: 16px;
+    font-style: italic;
+    color: var(--shadow);
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  .gold-rule {
+    width: 48px;
+    height: 1px;
+    background: var(--gold);
+    margin: 0 auto 48px;
+    opacity: 0.4;
+  }
+  .divider {
+    border: none;
+    border-top: 1px solid var(--line-soft);
+  }
+
+  /* ── OFFERINGS ── */
+  .offerings { background: var(--ink); }
+  .offerings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2px;
+    margin-top: 0;
+  }
+  .offering-card {
+    background: var(--ink-mid);
+    padding: 44px 36px;
+    border: 1px solid var(--line-soft);
+    position: relative;
+    transition: border-color 0.4s;
+  }
+  .offering-card:hover { border-color: var(--line); }
+  .offering-symbol {
+    font-size: 28px;
+    color: var(--gold);
+    opacity: 0.5;
+    margin-bottom: 20px;
+    display: block;
+  }
+  .offering-card h3 {
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--petal);
+    letter-spacing: 1px;
+    margin-bottom: 14px;
+  }
+  .offering-card p {
+    font-size: 15px;
+    color: var(--shadow);
+    font-style: italic;
+    line-height: 1.8;
+    margin-bottom: 24px;
+  }
+  .offering-price {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    display: block;
+  }
+  .offering-link {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--mist);
+    text-decoration: none;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--line-soft);
+    padding-bottom: 2px;
+    transition: color 0.3s, border-color 0.3s;
+  }
+  .offering-link:hover { color: var(--gold); border-color: var(--gold-dim); }
+  .offering-card.featured { border-color: rgba(201,168,76,0.35); }
+  .offering-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: var(--gold);
+    border: 1px solid var(--gold-dim);
+    padding: 4px 10px;
+    text-transform: uppercase;
+  }
+
+  /* ── FAMED SECTION (Gong Hee feature) ── */
+  .ancient-feature {
+    background: var(--ink-soft);
+    border-top: 1px solid var(--line-soft);
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .ancient-inner {
+    max-width: 1080px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+  }
+  .ancient-img {
+    aspect-ratio: 4/5;
+    background: var(--ink-mid);
+    border: 1px solid var(--line-soft);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    color: var(--shadow);
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+  .ancient-img span { font-size: 48px; opacity: 0.2; }
+  .ancient-text .eyebrow { text-align: left; }
+  .ancient-text h2 {
+    font-size: clamp(26px, 3vw, 40px);
+    font-weight: 300;
+    color: var(--petal);
+    letter-spacing: 1px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  .ancient-text h2 em { color: var(--gold); font-style: italic; }
+  .ancient-text p {
+    font-size: 16px;
+    color: var(--shadow);
+    font-style: italic;
+    line-height: 1.9;
+    margin-bottom: 16px;
+  }
+  .ancient-detail {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--gold-dim);
+    text-transform: uppercase;
+    margin-top: 8px;
+    margin-bottom: 32px;
+  }
+
+  /* ── SHOP ── */
+  .shop { background: var(--ink); }
+  .shop-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+  }
+  .shop-card {
+    background: var(--ink-mid);
+    border: 1px solid var(--line-soft);
+    transition: border-color 0.3s;
+  }
+  .shop-card:hover { border-color: var(--line); }
+  .shop-img {
+    aspect-ratio: 1;
+    background: var(--ink-soft);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: var(--gold);
+    opacity: 0.4;
+  }
+  .shop-info { padding: 18px 20px; }
+  .shop-card h4 {
+    font-size: 17px;
+    font-weight: 400;
+    color: var(--petal);
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+  }
+  .shop-card p {
+    font-size: 13px;
+    color: var(--shadow);
+    font-style: italic;
+    margin-bottom: 12px;
+  }
+  .shop-price {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--gold);
+    text-transform: uppercase;
+  }
+
+  /* ── PDF CHARTS ── */
+  .charts { background: var(--ink-soft); border-top: 1px solid var(--line-soft); border-bottom: 1px solid var(--line-soft); }
+  .charts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2px;
+  }
+  .chart-card {
+    background: var(--ink-mid);
+    border: 1px solid var(--line-soft);
+    padding: 40px 36px;
+  }
+  .chart-card h3 {
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--petal);
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+  }
+  .chart-card p {
+    font-size: 15px;
+    color: var(--shadow);
+    font-style: italic;
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+  .chart-includes {
+    list-style: none;
+    margin-bottom: 28px;
+  }
+  .chart-includes li {
+    font-size: 13px;
+    color: var(--mist);
+    letter-spacing: 0.5px;
+    padding: 6px 0;
+    border-bottom: 1px solid var(--line-soft);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .chart-includes li::before { content: '✦'; color: var(--gold); font-size: 10px; opacity: 0.6; }
+  .chart-price-block {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+  .chart-price {
+    font-size: 36px;
+    font-weight: 300;
+    color: var(--gold);
+    letter-spacing: 1px;
+  }
+  .chart-price-label { font-size: 12px; color: var(--shadow); font-style: italic; }
+
+  /* ── ABOUT ── */
+  .about { background: var(--ink); }
+  .about-inner {
+    max-width: 1080px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .about-img-wrap {
+    position: relative;
+  }
+  .about-img {
+    aspect-ratio: 3/4;
+    background: var(--ink-mid);
+    border: 1px solid var(--line-soft);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: var(--shadow);
+  }
+  .about-img span { font-size: 52px; opacity: 0.15; }
+  .about-img p { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; opacity: 0.6; }
+  .about-accent {
+    position: absolute;
+    bottom: -16px;
+    right: -16px;
+    width: 80px;
+    height: 80px;
+    border: 1px solid var(--line);
+    pointer-events: none;
+  }
+  .about-text .eyebrow { text-align: left; }
+  .about-text h2 {
+    font-size: clamp(26px, 3vw, 42px);
+    font-weight: 300;
+    color: var(--petal);
+    letter-spacing: 1px;
+    line-height: 1.2;
+    margin-bottom: 24px;
+    text-align: left;
+  }
+  .about-text h2 em { color: var(--gold); font-style: italic; }
+  .about-text p {
+    font-size: 16px;
+    color: var(--shadow);
+    font-style: italic;
+    line-height: 1.9;
+    margin-bottom: 16px;
+  }
+  .tools-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 24px;
+    margin-bottom: 32px;
+  }
+  .tool-tag {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    border: 1px solid var(--line-soft);
+    padding: 5px 14px;
+  }
+
+  /* ── TESTIMONIALS ── */
+  .testimonials {
+    background: var(--ink-soft);
+    border-top: 1px solid var(--line-soft);
+    border-bottom: 1px solid var(--line-soft);
+    text-align: center;
+  }
+  .testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+  .testimonial {
+    padding: 32px;
+    border: 1px solid var(--line-soft);
+    background: var(--ink-mid);
+    text-align: left;
+  }
+  .testimonial blockquote {
+    font-size: 17px;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--mist);
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+  .testimonial blockquote::before { content: '"'; color: var(--gold); font-size: 24px; opacity: 0.5; }
+  .testimonial cite {
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: var(--gold-dim);
+    text-transform: uppercase;
+    font-style: normal;
+  }
+
+  /* ── TIKTOK BAR ── */
+  .tiktok-bar {
+    background: var(--ink-mid);
+    border-top: 1px solid var(--line-soft);
+    border-bottom: 1px solid var(--line-soft);
+    padding: 24px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .tiktok-text {
+    font-size: 14px;
+    font-style: italic;
+    color: var(--shadow);
+    letter-spacing: 0.5px;
+  }
+  .tiktok-text span { color: var(--gold); }
+
+  /* ── BOOKING ── */
+  .booking {
+    background: var(--ink);
+    text-align: center;
+    padding: 100px 32px;
+  }
+  .booking h2 {
+    font-size: clamp(30px, 4vw, 52px);
+    font-weight: 300;
+    color: var(--petal);
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+  }
+  .booking h2 em { color: var(--gold); font-style: italic; }
+  .booking p {
+    font-size: 16px;
+    font-style: italic;
+    color: var(--shadow);
+    margin-bottom: 40px;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--ink);
+    border-top: 1px solid var(--line-soft);
+    padding: 40px 48px 32px;
+  }
+  .footer-inner {
+    max-width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+  }
+  .footer-brand .logo { font-size: 16px; letter-spacing: 3px; color: var(--gold); font-style: italic; font-weight: 300; display: block; margin-bottom: 10px; }
+  .footer-brand p { font-size: 13px; font-style: italic; color: var(--shadow); max-width: 240px; line-height: 1.7; }
+  .footer-col h5 { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 16px; font-weight: 400; }
+  .footer-col ul { list-style: none; }
+  .footer-col li { margin-bottom: 8px; }
+  .footer-col a { font-size: 14px; color: var(--shadow); font-style: italic; text-decoration: none; transition: color 0.3s; }
+  .footer-col a:hover { color: var(--petal); }
+  .footer-bottom {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding-top: 24px;
+    border-top: 1px solid var(--line-soft);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .footer-bottom p { font-size: 11px; color: rgba(106,90,138,0.5); letter-spacing: 1px; }
+  .footer-ornament { font-size: 13px; color: var(--gold); opacity: 0.4; letter-spacing: 4px; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    nav { padding: 14px 20px; }
+    .nav-links { display: none; }
+    section { padding: 60px 20px; }
+    .ancient-inner, .about-inner { grid-template-columns: 1fr; gap: 32px; }
+    .ancient-img { display: none; }
+    .about-accent { display: none; }
+    .tiktok-bar { padding: 20px; }
+    footer { padding: 40px 20px 24px; }
+    .footer-inner { flex-direction: column; gap: 28px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-scroll { animation: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">✦ Mystical Magnificent Molly ✦</a>
+  <ul class="nav-links">
+    <li><a href="#readings">Readings</a></li>
+    <li><a href="#charts">Charts</a></li>
+    <li><a href="#shop">Shop</a></li>
+    <li><a href="#about">About</a></li>
+  </ul>
+  <a href="#book" class="nav-book">Book a Reading</a>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <p class="hero-eyebrow">Ancient oracle · Modern seeker</p>
+  <div class="hero-ornament">— ✦ ☽ ✦ —</div>
+  <h1>Ancient wisdom,<br><em>personally revealed</em></h1>
+  <p class="hero-tagline">Every card turned, every chart drawn, every pendulum swung — yours alone. Come as you are. Leave knowing more.</p>
+  <p class="hero-disciplines">Tarot · Gong Hee Fot Choy · Birth Charts · Human Design · Runes · Pendulums</p>
+  <div class="hero-cta">
+    <a href="#book" class="btn-primary">Book a Personal Reading</a>
+    <a href="#readings" class="btn-outline">Explore Offerings</a>
+  </div>
+  <span class="hero-scroll">✦ scroll ✦</span>
+</header>
+
+<!-- READINGS -->
+<section class="offerings" id="readings">
+  <div class="section-inner">
+    <span class="eyebrow">Personal Readings</span>
+    <h2 class="section-title">What the cards hold for you</h2>
+    <p class="section-sub">Each session begins with your wish, your question, your truth</p>
+    <div class="gold-rule"></div>
+    <div class="offerings-grid">
+
+      <div class="offering-card featured">
+        <div class="offering-badge">Signature</div>
+        <span class="offering-symbol">✦</span>
+        <h3>Gong Hee Fot Choy</h3>
+        <p>A rare 1920s oracle system that reads the full landscape of your life — love, fortune, health, home, and the path ahead. Unlike any reading you have experienced before.</p>
+        <span class="offering-price">$88 personal &nbsp;·&nbsp; $44 collective</span>
+        <a href="#book" class="offering-link">Book this reading</a>
+      </div>
+
+      <div class="offering-card">
+        <span class="offering-symbol">☽</span>
+        <h3>Tarot Reading</h3>
+        <p>Candlelit, intuitive, deeply personal. We explore what the cards reveal about where you are right now — and what's moving toward you.</p>
+        <span class="offering-price">$66 personal &nbsp;·&nbsp; $33 collective</span>
+        <a href="#book" class="offering-link">Book this reading</a>
+      </div>
+
+      <div class="offering-card">
+        <span class="offering-symbol">◯</span>
+        <h3>Pendulum &amp; Rune Session</h3>
+        <p>Yes/no clarity and runic guidance for questions that need a direct answer. Grounding, precise, and surprisingly powerful.</p>
+        <span class="offering-price">$44 personal &nbsp;·&nbsp; $22 collective</span>
+        <a href="#book" class="offering-link">Book this reading</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- GONG HEE FEATURE -->
+<section class="ancient-feature">
+  <div class="section-inner ancient-inner">
+    <div class="ancient-img">
+      <span>✦</span>
+      <p>The Fot Choy Board</p>
+    </div>
+    <div class="ancient-text">
+      <span class="eyebrow">The forgotten oracle</span>
+      <h2>Gong Hee Fot Choy —<br><em>greetings of riches</em></h2>
+      <p>Created in 1920, Gong Hee Fot Choy is one of the most complete and detailed oracle systems ever devised. Using all 32 cards of a standard playing deck laid across 32 houses of life, it offers a panoramic reading of your world — love, money, health, travel, secrets, and beyond.</p>
+      <p>Most people have never encountered it. That is precisely why it works so well — it bypasses expectation and speaks directly.</p>
+      <p class="ancient-detail">A reading begins with your wish — a single sentence, whispered or written — and the cards do the rest.</p>
+      <a href="#book" class="btn-outline">Experience the board — $88</a>
+    </div>
+  </div>
+</section>
+
+<!-- PDF CHARTS -->
+<section class="charts" id="charts">
+  <div class="section-inner">
+    <span class="eyebrow">Digital Readings</span>
+    <h2 class="section-title">Your cosmic blueprint</h2>
+    <p class="section-sub">Beautifully designed PDF reports delivered within 48 hours</p>
+    <div class="gold-rule"></div>
+    <div class="charts-grid">
+
+      <div class="chart-card">
+        <h3>Birth Chart Report</h3>
+        <p>A complete astrological portrait — every planet, every house, every aspect, interpreted for you personally in stunning detail.</p>
+        <ul class="chart-includes">
+          <li>Sun, Moon &amp; Rising interpretation</li>
+          <li>All 12 planetary placements</li>
+          <li>The 12 houses of your life</li>
+          <li>9 major aspects explained</li>
+          <li>Your soul's deeper themes</li>
+        </ul>
+        <div class="chart-price-block">
+          <span class="chart-price">$55</span>
+          <span class="chart-price-label">delivered as PDF</span>
+        </div>
+        <a href="#book" class="btn-outline">Order your chart</a>
+      </div>
+
+      <div class="chart-card">
+        <h3>Human Design Report</h3>
+        <p>Your energetic blueprint — Type, Strategy, Authority, Profile, and all 9 energy centres decoded for the life you are actually designed to live.</p>
+        <ul class="chart-includes">
+          <li>Type, Strategy &amp; Authority</li>
+          <li>Profile &amp; Incarnation Cross</li>
+          <li>All 9 energy centres</li>
+          <li>Defined &amp; undefined explained</li>
+          <li>How to make aligned decisions</li>
+        </ul>
+        <div class="chart-price-block">
+          <span class="chart-price">$55</span>
+          <span class="chart-price-label">delivered as PDF</span>
+        </div>
+        <a href="#book" class="btn-outline">Order your chart</a>
+      </div>
+
+      <div class="chart-card" style="border-color: rgba(201,168,76,0.35);">
+        <div style="font-size:10px;letter-spacing:2px;color:var(--gold);border:1px solid var(--gold-dim);padding:4px 10px;display:inline-block;margin-bottom:20px;text-transform:uppercase;">Best value</div>
+        <h3>Complete Cosmic Bundle</h3>
+        <p>Birth Chart and Human Design together — the full picture of who you are astrologically and energetically, in one beautiful set.</p>
+        <ul class="chart-includes">
+          <li>Full birth chart report</li>
+          <li>Full Human Design report</li>
+          <li>Soul insights &amp; life themes</li>
+          <li>Your affirmation &amp; north star</li>
+          <li>Priority 24-hour delivery</li>
+        </ul>
+        <div class="chart-price-block">
+          <span class="chart-price">$88</span>
+          <span class="chart-price-label">both reports together</span>
+        </div>
+        <a href="#book" class="btn-primary">Order the bundle</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SHOP -->
+<section class="shop" id="shop">
+  <div class="section-inner">
+    <span class="eyebrow">The Shop</span>
+    <h2 class="section-title">Sacred tools &amp; curiosities</h2>
+    <p class="section-sub">Gathered with intention, offered with love</p>
+    <div class="gold-rule"></div>
+    <div class="shop-grid">
+      <div class="shop-card">
+        <div class="shop-img">⊕</div>
+        <div class="shop-info">
+          <h4>Pendulums</h4>
+          <p>Crystal and copper, each unique</p>
+          <span class="shop-price">from $22</span>
+        </div>
+      </div>
+      <div class="shop-card">
+        <div class="shop-img">᚜</div>
+        <div class="shop-info">
+          <h4>Rune Sets</h4>
+          <p>Hand-selected stone runes with pouch</p>
+          <span class="shop-price">from $33</span>
+        </div>
+      </div>
+      <div class="shop-card">
+        <div class="shop-img">✦</div>
+        <div class="shop-info">
+          <h4>Tarot Decks</h4>
+          <p>Curated decks for every reader</p>
+          <span class="shop-price">from $33</span>
+        </div>
+      </div>
+      <div class="shop-card">
+        <div class="shop-img">◈</div>
+        <div class="shop-info">
+          <h4>Divining Rods</h4>
+          <p>Copper rods for dowsing &amp; energy work</p>
+          <span class="shop-price">from $22</span>
+        </div>
+      </div>
+      <div class="shop-card">
+        <div class="shop-img">◇</div>
+        <div class="shop-info">
+          <h4>Crystals</h4>
+          <p>Raw and tumbled stones, selenite, quartz</p>
+          <span class="shop-price">from $11</span>
+        </div>
+      </div>
+      <div class="shop-card">
+        <div class="shop-img">☽</div>
+        <div class="shop-info">
+          <h4>Oracle Bundles</h4>
+          <p>Curated starter kits for new seekers</p>
+          <span class="shop-price">from $44</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-inner">
+    <div class="about-img-wrap">
+      <div class="about-img">
+        <span>✦</span>
+        <p>your photo here</p>
+      </div>
+      <div class="about-accent"></div>
+    </div>
+    <div class="about-text">
+      <span class="eyebrow">The Guide</span>
+      <h2>Rooted in ancient practice,<br><em>here for your becoming</em></h2>
+      <p>Molly works with rare and time-honoured divination systems that most readers have never encountered. Her approach is warm, unhurried, and grounded — the cards speak, and she listens alongside you.</p>
+      <p>She has gathered her tools over years of practice: the Gong Hee Fot Choy board, pendulums, runes, tarot, divining rods — each chosen for its depth and its history. Nothing performative. Everything intentional.</p>
+      <p><em>"You already know. The reading just helps you hear it."</em></p>
+      <div class="tools-list">
+        <span class="tool-tag">Gong Hee Fot Choy</span>
+        <span class="tool-tag">Tarot</span>
+        <span class="tool-tag">Pendulums</span>
+        <span class="tool-tag">Runes</span>
+        <span class="tool-tag">Divining Rods</span>
+        <span class="tool-tag">Birth Charts</span>
+        <span class="tool-tag">Human Design</span>
+      </div>
+      <a href="#book" class="btn-outline">Work with Molly</a>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="section-inner">
+    <span class="eyebrow">Kind words</span>
+    <h2 class="section-title">From those who've sat with the cards</h2>
+    <div class="gold-rule"></div>
+    <div class="testimonial-grid">
+      <div class="testimonial">
+        <blockquote>The Gong Hee Fot Choy reading was unlike anything I've experienced. She saw things no one could have known. I've thought about it every day since.</blockquote>
+        <cite>— Sarah M., verified client</cite>
+      </div>
+      <div class="testimonial">
+        <blockquote>My birth chart PDF is framed on my wall. The detail, the care, the way it was written — it felt like being truly seen for the first time.</blockquote>
+        <cite>— Jamie R., verified client</cite>
+      </div>
+      <div class="testimonial">
+        <blockquote>I came in skeptical and left in tears — the good kind. Molly has a gift for making you feel held while the cards do their work.</blockquote>
+        <cite>— Dee W., verified client</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIKTOK -->
+<div class="tiktok-bar">
+  <p class="tiktok-text">✦ Weekly collective readings &amp; oracle wisdom on <span>TikTok</span> — free, atmospheric, and made for seekers like you</p>
+  <a href="https://tiktok.com" class="btn-outline" target="_blank" rel="noopener">Follow @MysticalMMolly</a>
+</div>
+
+<!-- BOOKING -->
+<section class="booking" id="book">
+  <span class="eyebrow">Ready to begin?</span>
+  <h2>Book your <em>reading</em></h2>
+  <p>All sessions are held with care and complete confidentiality. Personal readings via video or voice call.</p>
+  <a href="mailto:hello@mysticalmagnificentmolly.com" class="btn-primary">Get in touch to book</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="logo">✦ Mystical Magnificent Molly ✦</span>
+      <p>Ancient wisdom for the modern seeker. Personal readings, sacred tools, and cosmic blueprints.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Readings</h5>
+      <ul>
+        <li><a href="#readings">Gong Hee Fot Choy</a></li>
+        <li><a href="#readings">Tarot</a></li>
+        <li><a href="#readings">Pendulum &amp; Rune</a></li>
+        <li><a href="#charts">Birth Charts</a></li>
+        <li><a href="#charts">Human Design</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>The Shop</h5>
+      <ul>
+        <li><a href="#shop">Pendulums</a></li>
+        <li><a href="#shop">Rune Sets</a></li>
+        <li><a href="#shop">Tarot Decks</a></li>
+        <li><a href="#shop">Crystals</a></li>
+        <li><a href="#shop">Oracle Bundles</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Connect</h5>
+      <ul>
+        <li><a href="#about">About Molly</a></li>
+        <li><a href="https://tiktok.com" target="_blank" rel="noopener">TikTok</a></li>
+        <li><a href="#book">Book a Reading</a></li>
+        <li><a href="mailto:hello@mysticalmagnificentmolly.com">Email</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Mystical Magnificent Molly · All readings offered for entertainment and spiritual exploration purposes</p>
+    <span class="footer-ornament">✦ ☽ ✦</span>
+  </div>
+</footer>
+
+</body>
+</html>
